@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>UXDG-320 WordClock</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="js/WordClock.js"></script>
+    <script type="text/javascript" src="js/Utility.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+<script type="text/javascript" src="js/P5/p5.min.js"></script>
+<script type="text/javascript" src="js/storingInput.js"></script> 
+    <!-- <script type="text/javascript" src="js/Color.js"></script> -->
+    <script type="text/javascript" src="js/RandomPalette.js"></script>
+    <script type="text/javascript" src="js/sketch.js"></script>
+
+
+</head>
+<body>
+    <main class="artBoardContainer"></main><!-- This is where P5js will create its canvas  -->
+
+    <div class="wordClockContainer">
+        <div class="col1 row1 letter word_it_is">I</div>
+        <div class="col2 row1 letter word_it_is">T</div>
+        <div class="col3 row1 letter word_it_is">'</div>
+        <div class="col4 row1 letter word_it_is">S</div>
+        <div class="col5 row1 letter">X</div>
+        <div class="col6 row1 letter word_minutes_twenty">T</div>
+        <div class="col7 row1 letter word_minutes_twenty">W</div>
+        <div class="col8 row1 letter word_minutes_twenty">E</div>
+        <div class="col9 row1 letter word_minutes_twenty">N</div>
+        <div class="col10 row1 letter word_minutes_twenty">T</div>
+        <div class="col11 row1 letter word_minutes_twenty">Y</div>
+        <div class="col12 row1 letter word_minutes_thirty">T</div>
+        <div class="col13 row1 letter word_minutes_thirty">H</div>
+        <div class="col14 row1 letter word_minutes_thirty">I</div>
+        <div class="col15 row1 letter word_minutes_thirty">R</div>
+        <div class="col16 row1 letter word_minutes_thirty">T</div>
+        <div class="col17 row1 letter word_minutes_thirty">Y</div>
+        <div class="col18 row1 letter word_minutes_ten">T</div>
+        <div class="col19 row1 letter word_minutes_ten">E</div>
+        <div class="col20 row1 letter word_minutes_ten">N</div>
+        <div class="col21 row1 letter word_minutes_two">T</div>
+        <div class="col22 row1 letter word_minutes_two">W</div>
+        <div class="col23 row1 letter word_minutes_two word_minutes_one">O</div>
+        <div class="col24 row1 letter word_minutes_one">N</div>
+        <div class="col25 row1 letter word_minutes_one">E</div>
+
+        <div class="col1 row2 letter word_minutes_four word_minutes_fourteen">F</div>
+        <div class="col2 row2 letter word_minutes_four word_minutes_fourteen">O</div>
+        <div class="col3 row2 letter word_minutes_four word_minutes_fourteen">U</div>
+        <div class="col4 row2 letter word_minutes_four word_minutes_fourteen">R</div>
+        <div class="col5 row2 letter word_minutes_fourteen">T</div>
+        <div class="col6 row2 letter word_minutes_fourteen">E</div>
+        <div class="col7 row2 letter word_minutes_fourteen">E</div>
+        <div class="col8 row2 letter word_minutes_fourteen">N</div>
+        <div class="col9 row2 letter word_minutes_six word_minutes_sixteen">S</div>
+        <div class="col10 row2 letter word_minutes_six word_minutes_sixteen">I</div>
+        <div class="col11 row2 letter word_minutes_six word_minutes_sixteen">X</div>
+        <div class="col12 row2 letter word_minutes_sixteen">T</div>
+        <div class="col13 row2 letter word_minutes_sixteen">E</div>
+        <div class="col14 row2 letter word_minutes_sixteen">E</div>
+        <div class="col15 row2 letter word_minutes_sixteen">N</div>
+        <div class="col16 row2 letter word_minutes_seven word_minutes_seventeen">S</div>
+        <div class="col17 row2 letter word_minutes_seven word_minutes_seventeen">E</div>
+        <div class="col18 row2 letter word_minutes_seven word_minutes_seventeen">V</div>
+        <div class="col19 row2 letter word_minutes_seven word_minutes_seventeen">E</div>
+        <div class="col20 row2 letter word_minutes_seven word_minutes_seventeen">N</div>
+        <div class="col21 row2 letter word_minutes_seventeen">T</div>
+        <div class="col22 row2 letter word_minutes_seventeen">E</div>
+        <div class="col23 row2 letter word_minutes_seventeen">E</div>
+        <div class="col24 row2 letter word_minutes_seventeen">N</div>
+        <div class="col25 row2 letter ">X</div>
+
+        <div class="col1 row3 letter word_minutes_five">F</div>
+        <div class="col2 row3 letter word_minutes_five">I</div>
+        <div class="col3 row3 letter word_minutes_five">V</div>
+        <div class="col4 row3 letter word_minutes_five word_minutes_eight word_minutes_eighteen">E</div>
+        <div class="col5 row3 letter word_minutes_eight word_minutes_eighteen">I</div>
+        <div class="col6 row3 letter word_minutes_eight word_minutes_eighteen">G</div>
+        <div class="col7 row3 letter word_minutes_eight word_minutes_eighteen">H</div>
+        <div class="col8 row3 letter word_minutes_eight word_minutes_eighteen">T</div>
+        <div class="col9 row3 letter word_minutes_eighteen">E</div>
+        <div class="col10 row3 letter word_minutes_eighteen">E</div>
+        <div class="col11 row3 letter word_minutes_eighteen">N</div>
+        <div class="col12 row3 letter word_minutes_thirteen">T</div>
+        <div class="col13 row3 letter word_minutes_thirteen">H</div>
+        <div class="col14 row3 letter word_minutes_thirteen">I</div>
+        <div class="col15 row3 letter word_minutes_thirteen">R</div>
+        <div class="col16 row3 letter word_minutes_thirteen">T</div>
+        <div class="col17 row3 letter word_minutes_thirteen">E</div>
+        <div class="col18 row3 letter word_minutes_thirteen">E</div>
+        <div class="col19 row3 letter word_minutes_thirteen">N</div>
+        <div class="col20 row3 letter word_minutes_eleven">E</div>
+        <div class="col21 row3 letter word_minutes_eleven">L</div>
+        <div class="col22 row3 letter word_minutes_eleven">E</div>
+        <div class="col23 row3 letter word_minutes_eleven">V</div>
+        <div class="col24 row3 letter word_minutes_eleven">E</div>
+        <div class="col25 row3 letter word_minutes_eleven">N</div>
+
+        <div class="col1 row4 letter word_minutes_three">T</div>
+        <div class="col2 row4 letter word_minutes_three">H</div>
+        <div class="col3 row4 letter word_minutes_three">R</div>
+        <div class="col4 row4 letter word_minutes_three">E</div>
+        <div class="col5 row4 letter word_minutes_three">E</div>
+        <div class="col6 row4 letter word_minutes_twelve">T</div>
+        <div class="col7 row4 letter word_minutes_twelve">W</div>
+        <div class="col8 row4 letter word_minutes_twelve">E</div>
+        <div class="col9 row4 letter word_minutes_twelve">L</div>
+        <div class="col10 row4 letter word_minutes_twelve">V</div>
+        <div class="col11 row4 letter word_minutes_twelve">E</div>
+        <div class="col12 row4 letter word_minutes_fifteen">F</div>
+        <div class="col13 row4 letter word_minutes_fifteen">I</div>
+        <div class="col14 row4 letter word_minutes_fifteen">F</div>
+        <div class="col15 row4 letter word_minutes_fifteen">T</div>
+        <div class="col16 row4 letter word_minutes_fifteen">E</div>
+        <div class="col17 row4 letter word_minutes_fifteen">E</div>
+        <div class="col18 row4 letter word_minutes_fifteen word_minutes_nine word_minutes_nineteen">N</div>
+        <div class="col19 row4 letter word_minutes_nine word_minutes_nineteen">I</div>
+        <div class="col20 row4 letter word_minutes_nine word_minutes_nineteen">N</div>
+        <div class="col21 row4 letter word_minutes_nine word_minutes_nineteen">E</div>
+        <div class="col22 row4 letter word_minutes_nineteen">T</div>
+        <div class="col23 row4 letter word_minutes_nineteen">E</div>
+        <div class="col24 row4 letter word_minutes_nineteen">E</div>
+        <div class="col25 row4 letter word_minutes_nineteen">N</div>
+
+        <div class="col1 row5 letter word_minute word_minutes">M</div>
+        <div class="col2 row5 letter word_minute word_minutes">I</div>
+        <div class="col3 row5 letter word_minute word_minutes">N</div>
+        <div class="col4 row5 letter word_minute word_minutes">U</div>
+        <div class="col5 row5 letter word_minute word_minutes">T</div>
+        <div class="col6 row5 letter word_minute word_minutes">E</div>
+        <div class="col7 row5 letter word_minutes">S</div>
+        <div class="col8 row5 letter">L</div>
+        <div class="col9 row5 letter word_past">P</div>
+        <div class="col10 row5 letter word_past">A</div>
+        <div class="col11 row5 letter word_past">S</div>
+        <div class="col12 row5 letter word_past word_to">T</div>
+        <div class="col13 row5 letter word_to">O</div>
+        <div class="col14 row5 letter">M</div>
+        <div class="col15 row5 letter word_hours_two">T</div>
+        <div class="col16 row5 letter word_hours_two">W</div>
+        <div class="col17 row5 letter word_hours_two word_hours_one">O</div>
+        <div class="col18 row5 letter word_hours_one">N</div>
+        <div class="col19 row5 letter word_hours_one">E</div>
+        <div class="col20 row5 letter word_noon">N</div>
+        <div class="col21 row5 letter word_noon">O</div>
+        <div class="col22 row5 letter word_noon">O</div>
+        <div class="col23 row5 letter word_noon">N</div>
+        <div class="col24 row5 letter">O</div>
+        <div class="col25 row5 letter">E</div>
+
+        <div class="col1 row6 letter word_hours_six">S</div>
+        <div class="col2 row6 letter word_hours_six">I</div>
+        <div class="col3 row6 letter word_hours_six">X</div>
+        <div class="col4 row6 letter word_hours_three">T</div>
+        <div class="col5 row6 letter word_hours_three">H</div>
+        <div class="col6 row6 letter word_hours_three">R</div>
+        <div class="col7 row6 letter word_hours_three">E</div>
+        <div class="col8 row6 letter word_hours_three">E</div>
+        <div class="col9 row6 letter word_hours_four">F</div>
+        <div class="col10 row6 letter word_hours_four">O</div>
+        <div class="col11 row6 letter word_hours_four">U</div>
+        <div class="col12 row6 letter word_hours_four">R</div>
+        <div class="col13 row6 letter word_midnight">M</div>
+        <div class="col14 row6 letter word_midnight">I</div>
+        <div class="col15 row6 letter word_midnight">D</div>
+        <div class="col16 row6 letter word_midnight">N</div>
+        <div class="col17 row6 letter word_midnight">I</div>
+        <div class="col18 row6 letter word_midnight">G</div>
+        <div class="col19 row6 letter word_midnight">H</div>
+        <div class="col20 row6 letter word_midnight">T</div>
+        <div class="col21 row6 letter word_hours_eight">E</div>
+        <div class="col22 row6 letter word_hours_eight">I</div>
+        <div class="col23 row6 letter word_hours_eight">G</div>
+        <div class="col24 row6 letter word_hours_eight">H</div>
+        <div class="col25 row6 letter word_hours_eight">T</div>
+
+        <div class="col1 row7 letter word_hours_five">F</div>
+        <div class="col2 row7 letter word_hours_five">I</div>
+        <div class="col3 row7 letter word_hours_five">V</div>
+        <div class="col4 row7 letter word_hours_five word_hours_eleven">E</div>
+        <div class="col5 row7 letter word_hours_eleven">L</div>
+        <div class="col6 row7 letter word_hours_eleven">E</div>
+        <div class="col7 row7 letter word_hours_eleven">V</div>
+        <div class="col8 row7 letter word_hours_eleven">E</div>
+        <div class="col9 row7 letter word_hours_eleven">N</div>
+        <div class="col10 row7 letter word_hours_seven">S</div>
+        <div class="col11 row7 letter word_hours_seven">E</div>
+        <div class="col12 row7 letter word_hours_seven">V</div>
+        <div class="col13 row7 letter word_hours_seven">E</div>
+        <div class="col14 row7 letter word_hours_seven word_hours_nine">N</div>
+        <div class="col15 row7 letter word_hours_nine">I</div>
+        <div class="col16 row7 letter word_hours_nine">N</div>
+        <div class="col17 row7 letter word_hours_nine">E</div>
+        <div class="col18 row7 letter word_hours_ten">T</div>
+        <div class="col19 row7 letter word_hours_ten">E</div>
+        <div class="col20 row7 letter word_hours_ten">N</div>
+        <div class="col21 row7 letter">M</div>
+        <div class="col22 row7 letter">A</div>
+        <div class="col23 row7 letter">N</div>
+        <div class="col24 row7 letter">L</div>
+        <div class="col25 row7 letter">Y</div>
+
+        <div class="col1 row8 letter word_oclock">O</div>
+        <div class="col2 row8 letter word_oclock">'</div>
+        <div class="col3 row8 letter word_oclock">C</div>
+        <div class="col4 row8 letter word_oclock">L</div>
+        <div class="col5 row8 letter word_oclock">O</div>
+        <div class="col6 row8 letter word_oclock">C</div>
+        <div class="col7 row8 letter word_oclock">K</div>
+        <div class="col8 row8 letter">B</div>
+        <div class="col9 row8 letter word_in_the">I</div>
+        <div class="col10 row8 letter word_in_the">N</div>
+        <div class="col11 row8 letter">R</div>
+        <div class="col12 row8 letter word_in_the">T</div>
+        <div class="col13 row8 letter word_in_the">H</div>
+        <div class="col14 row8 letter word_in_the">E</div>
+        <div class="col15 row8 letter">E</div>
+        <div class="col16 row8 letter word_afternoon">A</div>
+        <div class="col17 row8 letter word_afternoon">F</div>
+        <div class="col18 row8 letter word_afternoon">T</div>
+        <div class="col19 row8 letter word_afternoon">E</div>
+        <div class="col20 row8 letter word_afternoon">R</div>
+        <div class="col21 row8 letter word_afternoon">N</div>
+        <div class="col22 row8 letter word_afternoon">O</div>
+        <div class="col23 row8 letter word_afternoon">O</div>
+        <div class="col24 row8 letter word_afternoon">N</div>
+        <div class="col25 row8 letter">A</div>
+
+        <div class="col1 row9 letter">D</div>
+        <div class="col2 row9 letter">O</div>
+        <div class="col3 row9 letter">V</div>
+        <div class="col4 row9 letter">E</div>
+        <div class="col5 row9 letter word_morning">M</div>
+        <div class="col6 row9 letter word_morning">O</div>
+        <div class="col7 row9 letter word_morning">R</div>
+        <div class="col8 row9 letter word_morning">N</div>
+        <div class="col9 row9 letter word_morning">I</div>
+        <div class="col10 row9 letter word_morning">N</div>
+        <div class="col11 row9 letter word_morning">G</div>
+        <div class="col12 row9 letter">F</div>
+        <div class="col13 row9 letter word_night">N</div>
+        <div class="col14 row9 letter word_night">I</div>
+        <div class="col15 row9 letter word_night">G</div>
+        <div class="col16 row9 letter word_night">H</div>
+        <div class="col17 row9 letter word_night">T</div>
+        <div class="col18 row9 letter">I</div>
+        <div class="col19 row9 letter word_evening">E</div>
+        <div class="col20 row9 letter word_evening">V</div>
+        <div class="col21 row9 letter word_evening">E</div>
+        <div class="col22 row9 letter word_evening">N</div>
+        <div class="col23 row9 letter word_evening">I</div>
+        <div class="col24 row9 letter word_evening">N</div>
+        <div class="col25 row9 letter word_evening">G</div>
+    </div>
+</body>
+</html>
